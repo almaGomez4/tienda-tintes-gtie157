@@ -731,3 +731,25 @@ html, body {
 .menuCloseBtn:hover{
   background: #000;
 }
+
+.icon-btn, .btn, .burger, .menuList a, .menuCloseBtn{
+  transition: transform .16s ease, box-shadow .16s ease, background-color .16s ease, color .16s ease, border-color .16s ease, filter .16s ease;
+  will-change: transform;
+}
+
+@media (hover: hover) and (pointer: fine){
+  .icon-btn:hover, .btn:hover, .burger:hover, .menuList a:hover, .menuCloseBtn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0,0,0,.10);
+  }
+}
+
+.icon-btn:active, .btn:active, .burger:active, .menuList a:active, .menuCloseBtn:active{
+  transform: scale(.96);
+  filter: brightness(.98);
+}
+
+.icon-btn:focus-visible, .btn:focus-visible, .burger:focus-visible, .menuList a:focus-visible, .menuCloseBtn:focus-visible{
+  outline: 3px solid rgba(255,122,0,.35);
+  outline-offset: 2px;
+}
